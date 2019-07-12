@@ -1,24 +1,18 @@
+/**
+ * create at 07/12/19
+ */
 import React, { Component } from 'react'
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { BrowserRouter as Router, Route, } from 'react-router-dom'
 
 // components
 import { ReduxPage, } from './demo'
 
-// redux
-import rootReducer from './redux/reducer'
-
-const store = createStore(rootReducer)
-
-class App extends Component{
-
+export default class AppComponent extends Component{
   render(){
     return (
-      <Provider store={store}>
-        <ReduxPage />
-      </Provider>
+      <Router>
+        <Route path="/" component={ReduxPage}/>
+      </Router>
     )
   }
 }
-
-export default App

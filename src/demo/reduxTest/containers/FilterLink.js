@@ -2,7 +2,11 @@
  * create at 07/11/19
  */
 import { connect } from 'react-redux'
+
+// redux
 import { setVisibilityFilter } from '../../../redux/actions'
+
+// components
 import Link from '../components/Link'
 
 const mapStateToProps = (state, ownProps) => ({
